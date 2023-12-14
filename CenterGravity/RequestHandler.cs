@@ -197,7 +197,7 @@ namespace BBI.JD
 
                         Level level = document.GetElement(element.LevelId) as Level;
 
-                        FamilyInstance familyInstance = document.Create.NewFamilyInstance(cv.Centroid, familySymbol, element, level, StructuralType.NonStructural);
+                        FamilyInstance familyInstance = document.Create.NewFamilyInstance(cv.Centroid, familySymbol, new XYZ(0, 0, 0), level, StructuralType.NonStructural);
 
                         #if RVT2019
                             familyInstance.LookupParameter("CenterGravity").Set(cv.XYZToString(
